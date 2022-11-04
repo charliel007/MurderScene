@@ -1,0 +1,99 @@
+Console Game: _________________
+Player is a small-town detective who’s been assigned to a murder scene: the local bar, ___________. A long-time local resident, ___________, had just finished a beer and was about to leave, when he suddenly fell off of his stool. His friends rushed to help him back up, thinking he’d lost his balance, only to find that he was dead! Player’s job is to find out who did it!
+
+Challenge: only have so many inputs to figure out who did it! (Time Constraint) – each action is assigned a point value; when user reaches threshold, they have to make their guess/finish the game
+
+Victim
+Name:
+Age:
+Occupation/Workplace:
+Autopsy findings/manner of death:
+
+
+Suspects
+	Suspect 1
+		Name:
+		Age:
+		Occupation/Workplace:
+		Relationship to victim: Soon-to-be-Ex-wife
+		Alibi/story:
+	Suspect 2
+		Name:
+		Age:
+		Occupation/Workplace:
+		Relationship to victim: Disgruntled co-worker
+		Alibi/story:
+	Suspect 3
+		Name:
+		Age:
+		Occupation/Workplace: 
+		Relationship to victim: Town crazyperson, acquaintance
+		Alibi/story:
+
+Shady detective work options (random chance whether or not it will work):
+	Hack into suspect’s phone
+		Switch: got good lead, got misleading information, got caught (counts as double moves)
+	Break into suspect’s home
+		Switch: got good lead, got misleading information, got caught (counts as double moves)
+
+
+Legit detective work option 
+	Run background check on suspect (1, 2, or 3)
+		(i.e. town crazy person would also have a public nuisance on the same day)
+	Run background check on Victim
+		(i.e. stalking, bad check, public nuisance, or nothing)
+	Interview Bartender
+		Name, Age, Occupation, Role 
+	Interview Fellow Patron who tried to help
+	Interview Bouncer
+	Forensic testing of each suspect (1, 2, 3)	
+		Someone else’s prints on the beer bottle (drink spiked?)
+		Stomach contents (poisoned dinner?)
+		BAC (not enough to kill him from alcohol poisoning)
+		
+
+Witness questions – user chooses which question to ask the suspect:
+	Anything_Suspicious: Did you notice anything suspicious around the time that (victim) fell?		
+
+	Interaction: Did you happen to see (suspect) interacting with (victim) at any point?
+		Yes, I saw them ____________
+		If yes, follow-up question: 
+
+Suspect questions:
+	Temperament: 
+	
+       Alibi_Where: Where were you on the night of (incident date)?
+		Suspect 1 (ex): At home seething, he went out to the bar again!
+		Suspect 2 (coworker): At the bar, sitting a few seats down from (victim) trying to ignore!
+		Suspect 3 (crazy): Panhandling outside the bar/trying to get someone to buy me a beer.	
+	
+	Alibi_Verify: Can anyone vouch for you?
+		Suspect 1: I was home alone.
+		Suspect 2: Ask anyone at the bar!
+		Suspect 3: The bouncer kicked me out, talk to him!				
+
+Alibi_What: What were you doing?
+		Suspect 1: Cleaning up and washing the dishes!
+		Suspect 2: Drinking my sorrows.
+		Suspect 3: Trying to get back into the bar and get a beer by any means necessary!	
+	
+       Grudge: Did you have a grudge against (victim)?
+		Yes=> What for?
+			1: Cheating, no-good scoundrel who goes out to the bar too much!
+			2: Took my promotion even though he sucks!
+			3: (none)
+		No => (move on?)
+			3: Nope, he bought me a beer
+	
+
+Question logic:
+Question => Answer => Follow-up question(s) depend on answer
+	i.e. “No I saw nothing” => “Thanks, bye”
+	“Yes, I saw ________” => “Elaborate on ________”
+	
+	
+
+
+
+
+ 
