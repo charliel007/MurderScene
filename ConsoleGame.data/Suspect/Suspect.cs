@@ -2,7 +2,7 @@
 public class Suspect
 {
     public Suspect(string name, int age, string occupation, string relationship, bool criminalHistory, bool isGuilty,
-    List<string> suspectResponses, List<Crime> crimes)
+    List<string> suspectResponses, List<Crime> crimes, List<string> warrantInfo)
     {
         Name = name;
         Age = age;
@@ -12,6 +12,7 @@ public class Suspect
         IsGuilty = isGuilty;
         SuspectResponses = suspectResponses;
         Crimes = crimes;
+        WarrantInfo = warrantInfo;
     }
     public string Name { get; set; }
     public int Age { get; set; }
@@ -22,6 +23,7 @@ public class Suspect
 
     public List<string>SuspectResponses{get; set;} = new List<string>();
     public List<Crime> Crimes { get; set; } = new List<Crime>();
+    public List<string> WarrantInfo { get; set; } = new List<string>();
 }
 
 

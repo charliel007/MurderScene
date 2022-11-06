@@ -8,10 +8,6 @@ public class SolveMurder
     public void SolveTheMurder(List<Suspect> suspects)
     {
 
-        // Suspect1 suspect1 = new Suspect1();
-        // Suspect2 suspect2 = new Suspect2();
-        // Suspect3 suspect3 = new Suspect3();
-
 
     Console.Clear();
     

@@ -5,45 +5,42 @@ using System.Threading.Tasks;
 
 public class WitnessQuestions
 {
-public static void AskQuestion(Witness witness, List<string> interrogationQuestions)
+    public static void AskQuestion(Witness witness)
     {
-        System.Console.WriteLine($"Suspect under investigation: {witness.Name}");
-        foreach (var question in interrogationQuestions)
+        while (true)
         {
-            WitnessResponse(question, witness.WitnessResponses);
-        }
-    }
-private static void WitnessResponse(string question, List<string> answers)
-    {
-        System.Console.WriteLine(question);
-        System.Console.WriteLine("Make your choice!\n" +
-                                "1. Did you happen to see (suspect1) interacting with (victim) at any point?\n" +
-                                "1. Did you happen to see (suspect2) interacting with (victim) at any point?\n" +
-                                "1. Did you happen to see (suspect3) interacting with (victim) at any point?\n" +
-                                "2. Anything you happen to remember that stands out to you? Even something small?\n");
+            System.Console.WriteLine($"Suspect under investigation: {witness.Name}");
+
+            System.Console.WriteLine("Make your choice!\n" +
+                                    "1. Did you happen to see (suspect1) interacting with (victim) at any point?\n" +
+                                    "2. Did you happen to see (suspect2) interacting with (victim) at any point?\n" +
+                                    "3. Did you happen to see (suspect3) interacting with (victim) at any point?\n" +
+                                    "4. Anything you happen to remember that stands out to you? Even something small?\n" +
+                                    "0. Return to previsou menu");
 
 
-        string selection = Console.ReadLine() ?? "";
-        switch (selection)
-        {
-            case "1":
-                System.Console.WriteLine(answers[0]);
-                break;
-            case "2":
-                System.Console.WriteLine(answers[1]);
-                break;
-            case "3":
-                System.Console.WriteLine(answers[2]);
-                break;
-            case "4":
-                System.Console.WriteLine(answers[3]);
-                break;
-            case "0":
-                return;
-            default:
-                Console.WriteLine("Please enter a valid selection.");
-                Program.PauseAndWaitForKeypress();
-                break;
+            string selection = Console.ReadLine() ?? "";
+            switch (selection)
+            {
+                case "1":
+                    System.Console.WriteLine(witness.WitnessResponses[0]);
+                    break;
+                case "2":
+                    System.Console.WriteLine(witness.WitnessResponses[1]);
+                    break;
+                case "3":
+                    System.Console.WriteLine(witness.WitnessResponses[2]);
+                    break;
+                case "4":
+                    System.Console.WriteLine(witness.WitnessResponses[3]);
+                    break;
+                case "0":
+                    return;
+                default:
+                    Console.WriteLine("Please enter a valid selection.");
+                    Program.PauseAndWaitForKeypress();
+                    break;
+            }
         }
     }
-    }
+}

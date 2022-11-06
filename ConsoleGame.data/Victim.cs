@@ -4,10 +4,10 @@ public class Victim
     {
         
     }
-    public string Name { get; set; }
-    public int Age { get; set; }
-    public string Occupation { get; set; }
+    public string Name { get; set; } = "Mr. Victim";
+    public int Age { get; set; } = 30;
+    public string Occupation { get; set; } = "Works with co-workers";
     public string CauseOfDeath { get; set; } = "Poisoned";
-    public string Background { get; private set; } //make this defined, but not immediately visible
-
+    public List<Crime> Crimes { get; set; } = new List<Crime>
+                                             { new Crime("DUI","misdemeanor: Guilty",new DateTime(2021,05,05),"Town","State")};
 }

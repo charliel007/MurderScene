@@ -3,13 +3,6 @@ public class SuspectInterview
 {
 SuspectQuestions questions = new SuspectQuestions();
 
-List<string> suspectQuestions = new List<string>
-{
-    "1. Where were you on the night of the incident?\n",
-    "2. Did you hold a grudge against (victim)\n",
-    "3. Did you see anything suspicious around the time that (victim) fell off his stool?\n",
-    "4. Did you see any of (victim)'s interactions with other suspects?/n"
-};
 
 public void Suspects(List<Suspect> suspects)
     {
@@ -17,9 +10,9 @@ public void Suspects(List<Suspect> suspects)
         
         while (true)
         {
-            System.Console.WriteLine($"{suspects[0].Name}  {suspects[0].Age}  {suspects[0].Occupation}   {suspects[0].Relationship}\n\n" +
-                                    $"{suspects[1].Name}   {suspects[1].Age}  {suspects[1].Occupation}   {suspects[1].Relationship}\n\n" +
-                                    $"{suspects[2].Name}   {suspects[2].Age}  {suspects[2].Occupation}   {suspects[2].Relationship}\n\n");
+            System.Console.WriteLine($"Suspect 1:  {suspects[0].Name}  {suspects[0].Age}  {suspects[0].Occupation}   {suspects[0].Relationship}\n" +
+                                     $"Suspect 2:  {suspects[1].Name}   {suspects[1].Age}  {suspects[1].Occupation}   {suspects[1].Relationship}\n" +
+                                     $"Suspect 3:  {suspects[2].Name}   {suspects[2].Age}  {suspects[2].Occupation}   {suspects[2].Relationship}\n");
             Console.WriteLine(
             "------------Options-----------\n" +
             "1. Interview Suspect 1\n" +
@@ -34,13 +27,13 @@ public void Suspects(List<Suspect> suspects)
         switch (selection)
         {
             case "1":
-                SuspectQuestions.AskQuestion(suspects[0], suspectQuestions);
+                SuspectQuestions.AskQuestion(suspects[0]);
                 break;
             case "2":
-                SuspectQuestions.AskQuestion(suspects[1], suspectQuestions);
+                SuspectQuestions.AskQuestion(suspects[1]);
                 break;
             case "3":
-                SuspectQuestions.AskQuestion(suspects[2], suspectQuestions);
+                SuspectQuestions.AskQuestion(suspects[2]);
                 break;
             case "0":
                 return;
