@@ -2,7 +2,7 @@
 public class SuspectInterview
 {
 SuspectQuestions questions = new SuspectQuestions();
-
+SolveMurder solveMurder = new SolveMurder();
 
 public void Suspects(List<Suspect> suspects)
     {
@@ -11,8 +11,8 @@ public void Suspects(List<Suspect> suspects)
         while (true)
         {
             System.Console.WriteLine($"Suspect 1:  {suspects[0].Name}  {suspects[0].Age}  {suspects[0].Occupation}   {suspects[0].Relationship}\n" +
-                                     $"Suspect 2:  {suspects[1].Name}   {suspects[1].Age}  {suspects[1].Occupation}   {suspects[1].Relationship}\n" +
-                                     $"Suspect 3:  {suspects[2].Name}   {suspects[2].Age}  {suspects[2].Occupation}   {suspects[2].Relationship}\n");
+                                    $"Suspect 2:  {suspects[1].Name}   {suspects[1].Age}  {suspects[1].Occupation}   {suspects[1].Relationship}\n" +
+                                    $"Suspect 3:  {suspects[2].Name}   {suspects[2].Age}  {suspects[2].Occupation}   {suspects[2].Relationship}\n");
             Console.WriteLine(
             "------------Options-----------\n" +
             "1. Interview Suspect 1\n" +
@@ -34,6 +34,9 @@ public void Suspects(List<Suspect> suspects)
                 break;
             case "3":
                 SuspectQuestions.AskQuestion(suspects[2]);
+                break;
+            case "4":
+                solveMurder.SolveTheMurder();
                 break;
             case "0":
                 return;

@@ -1,5 +1,6 @@
 public class RunBackgroundCheck
 {
+    SolveMurder solveMurder = new SolveMurder();
     public void Background(List<Suspect> suspects)
     {
 
@@ -11,9 +12,9 @@ public class RunBackgroundCheck
         while (true)
         {
             System.Console.WriteLine($"Suspect 1:  {suspects[0].Name}  {suspects[0].Age}  {suspects[0].Occupation}   {suspects[0].Relationship}\n" +
-                                     $"Suspect 2:  {suspects[1].Name}   {suspects[1].Age}  {suspects[1].Occupation}   {suspects[1].Relationship}\n" +
-                                     $"Suspect 3:  {suspects[2].Name}   {suspects[2].Age}  {suspects[2].Occupation}   {suspects[2].Relationship}\n" +
-                                     $"Victim:     {victim.Name}   {victim.Age}  {victim.Occupation}   {victim.CauseOfDeath}\n");
+                                    $"Suspect 2:  {suspects[1].Name}   {suspects[1].Age}  {suspects[1].Occupation}   {suspects[1].Relationship}\n" +
+                                    $"Suspect 3:  {suspects[2].Name}   {suspects[2].Age}  {suspects[2].Occupation}   {suspects[2].Relationship}\n" +
+                                    $"Victim:     {victim.Name}   {victim.Age}  {victim.Occupation}   {victim.CauseOfDeath}\n");
             Console.WriteLine(
             "------------Options-----------\n" +
             "1. Run Background Check on Suspect 1\n" +
@@ -29,18 +30,22 @@ public class RunBackgroundCheck
             {
                 case "1":
                     ShowCriminalData(suspects[0]);
+                    Program.UserMove();
                     break;
                 case "2":
                     ShowCriminalData(suspects[1]);
+                    Program.UserMove();
                     break;
                 case "3":
                     ShowCriminalData(suspects[2]);
+                    Program.UserMove();
                     break;
                 case "4":
                     Console.WriteLine(victim.Crimes[0]);  //This is as a list if you want to add more.  If so, it would need iteretaed through like the ShowCrimalData method with a foreach loop below.
+                    Program.UserMove();
                     break;
                 case "5":
-                    //
+                    solveMurder.SolveTheMurder();
                     break;
                 case "0":
                     return;

@@ -24,15 +24,19 @@ public class WitnessQuestions
             {
                 case "1":
                     System.Console.WriteLine(witness.WitnessResponses[0]);
+                    Program.UserMove();
                     break;
                 case "2":
                     System.Console.WriteLine(witness.WitnessResponses[1]);
+                    Program.UserMove();
                     break;
                 case "3":
                     System.Console.WriteLine(witness.WitnessResponses[2]);
+                    Program.UserMove();
                     break;
                 case "4":
                     System.Console.WriteLine(witness.WitnessResponses[3]);
+                    Program.UserMove();
                     break;
                 case "0":
                     return;

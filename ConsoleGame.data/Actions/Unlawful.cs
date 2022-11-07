@@ -17,7 +17,7 @@ using System.Threading.Tasks;
                                     $"{suspects[1].Name}   {suspects[1].Age}  {suspects[1].Occupation}   {suspects[1].Relationship}\n\n" +
                                     $"{suspects[2].Name}   {suspects[2].Age}  {suspects[2].Occupation}   {suspects[2].Relationship}\n\n");
             Console.WriteLine(
-            "----------------Shady Options (2 moves)----------\n" +
+            "----------------Shady Options (counts as 2 moves)----------\n" +
             "1. Break into Suspect 1 Home\n" +
             "2. Break into Suspect 2 Home\n" +
             "3. Break into Suspect 3 Home\n" +

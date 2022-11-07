@@ -5,7 +5,7 @@ public class Program
 {
     public static void Main()
     {
-       
+
 
         Suspect suspect1 = new Suspect("WifeName",
                                         30,
@@ -93,11 +93,9 @@ public class Program
         Forensics forensics = new Forensics();
         Warrants warrants = new Warrants();
         Unlawful unlawful = new Unlawful();
+
         SolveMurder solveMurder = new SolveMurder();
-
-
-
-
+        
 
         Console.Clear();
         System.Console.WriteLine("----Murder Solve---\n");
@@ -118,8 +116,8 @@ public class Program
             "2. Witnesses\n" +
             "3. Background Check(s)\n" +
             "4. Try for Warrant(s)\n" +
-            "5. Unlawful Tactics\n" +
-            "6. Solve the Murder!\n" +
+//            "5. Unlawful Tactics\n" +
+            "5. Solve the Murder!\n" +
             "0. Exit"
             );
 
@@ -138,11 +136,11 @@ public class Program
                 case "4":
                     warrants.WarrantOptions(suspects);
                     break;
-                case "5":
+/*                 case "5":
                     unlawful.UnlawfulTactics(suspects);
                     break;
-                case "6":
-                    solveMurder.SolveTheMurder(suspects);
+ */                case "5":
+                    solveMurder.SolveTheMurder();
                     break;
                 case "0":
                     continueToRun = false;
@@ -163,10 +161,11 @@ public class Program
         Console.ReadKey();
     }
 
-    public static int userMoves = 10;
+    public static int userMoves = 9;
 
     public static void UserMove()
     {
+        SolveMurder solveMurder = new SolveMurder();
 
         if (userMoves > 0)
         {
@@ -174,11 +173,15 @@ public class Program
         }
         else if (userMoves == 0)
         {
-            //call method to show fernsics for final determination
+            System.Console.WriteLine("Forensic eveidence is in, make your determination!");
+            PauseAndWaitForKeypress();
+            solveMurder.SolveTheMurder();
         }
         else
         {
             Console.WriteLine("You lost the game, better luck next time :(");
+            PauseAndWaitForKeypress();
+            System.Environment.Exit(1);
         }
 
         userMoves--;
